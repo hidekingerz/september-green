@@ -13,15 +13,15 @@ module.exports = {
     rules: [
       // JSファイルにEslintを適用
       {
-        test: /\.js$/,
+        test: /\.js[x]?$/,
         exclude: /node_modules/,
         loader: "eslint-loader",
         options: {
-          fix: false,
+          fix: true,
           failOnError: true,
         }
       },
-      // .jsxも対象に含む
+      // babel
       {
         test: /\.js[x]?$/,
         exclude: /node_modules/,
