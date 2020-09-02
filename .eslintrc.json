@@ -3,13 +3,6 @@
         "browser": true,
         "es2021": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:prettier/recommended",
-        "prettier/react",
-        "prettier"
-    ],
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -17,20 +10,23 @@
         "ecmaVersion": 11,
         "sourceType": "module"
     },
-    "plugins": [
-        "react",
-        "prettier"
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "prettier/react"
     ],
+    "plugins": ["react"],
     "rules": {
-        "prettier/prettier": "error"
+        "no-var": "error"
     },
     "settings": {
         "react": {
             "createClass": "createReactClass",
             "pragma": "React",
 //            "fragment": "React.Fragment",
-            "version": "detect"
-//            "flowVersion": "0.53"
+            "version": "detect",
+            "flowVersion": "0.53"
         },
         "propWrapperFunctions": [
             "forbidExtraProps",

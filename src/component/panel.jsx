@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react"
 
 export default class Panel extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      input: '',
+      input: "",
       list: [],
     }
   }
   handleSubmit(e) {
     e.preventDefault()
 
-    const input = '',
+    const input = "",
       list = this.state.list.slice()
 
     list.unshift(this.state.input)
@@ -24,11 +24,7 @@ export default class Panel extends React.Component {
   render() {
     return (
       <form>
-        <input
-          type="text"
-          value={this.state.input}
-          onChange={(e) => this.setState({ input: e.target.value })}
-        />
+        <input type="text" value={this.state.input} onChange={(e) => this.setState({ input: e.target.value })} />
         <button type="submit" onClick={this.handleSubmit.bind(this)}>
           add!
         </button>
